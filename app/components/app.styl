@@ -1,0 +1,23 @@
+@import '../common/stylus/mixin.styl'
+
+.tag
+    display: flex
+    width: 100%
+    height: 40px
+    line-height: 40px
+    border-1px(rgba(7,17,27,0.1))
+    .tabItem
+      flex: 1 //flex 布局 需要了解
+      text-align: center
+      display: block
+      font-size: 14px
+      color: rgb(77,85,93)
+      .active.item
+        color: red
+
+.goods
+  transition: all 2s
+  &.fadeGoods-enter
+    opacity: 0
+  &.fadeGoods-enter-active
+    opacity: 1
