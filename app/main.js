@@ -30,7 +30,7 @@ const DevTools = createDevTools(
 const logger = createLogger();
 const enhancer = compose(
   applyMiddleware(ReduxThunk,logger),
-  DevTools.instrument();
+  DevTools.instrument()
 );
 
 const store = createStore(indexReducer, enhancer);
