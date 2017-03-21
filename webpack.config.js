@@ -8,6 +8,7 @@ module.exports = {
     historyApiFallback: true,
     hot: true,
     inline: true,
+    colors: true,
     progress: true,
     contentBase: './app',
     port: 8081

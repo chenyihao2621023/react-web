@@ -45,6 +45,7 @@ class Shopcart extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
+    console.log(this.props.food);
     this.selectFood = [];
     this.totalCount = 0;
     this.totalPrice = 0;
@@ -107,8 +108,8 @@ class Shopcart extends React.Component {
             </div>
           </div>
           <Animate transitionName="fold" showProp='data-show'>
-          {
-          <div key="1" className="shopcart-list" data-show={this.state.show&&this.totalCount} style={{display: this.state.show&&this.totalCount?'':'none'}}>
+          <div className={this.state.show&&this.totalCount?"shopcart-list show":"shopcart-list"} key="1" data-show={this.state.show&&this.totalCount}
+            >
             <div className="list-header">
               <h1 className="title">购物车</h1>
               <span className="empty" onClick={this.empty.bind(this)}>清空</span>
@@ -139,7 +140,6 @@ class Shopcart extends React.Component {
               </ul>
             </div>
           </div>
-          }
           </Animate>
         </div>
         <Animate transitionName="fade">

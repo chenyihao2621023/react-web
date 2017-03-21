@@ -154,6 +154,8 @@ class Shop extends React.Component {
   }
 
   render() {
+    console.log('render');
+    console.log(this.state.goods);
     const classMap = ['decrease', 'discount', 'special', 'invoice', 'guarantee'];
     return (
       <div className="goods">

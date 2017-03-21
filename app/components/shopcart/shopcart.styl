@@ -93,15 +93,20 @@
     z-index: -1
     width: 100%
     transition: all 0.5s
+    display: none
     transform: translate3d(0,-100%,0)
+    &.show
+      display: block
+    &.fold-leave
+      display: block
+      transform: translate3d(0,-100%,0)
+    &.fold-leave-active
+      display: block
+      transform: translate3d(0,0,0)
     &.fold-enter
       transform: translate3d(0,0,0)
     &.fold-enter-active
       transform: translate3d(0,-100%,0)
-    &.fold-leave
-      transform: translate3d(0,-100%,0)
-    &.fold-leave-active
-      transform: translate3d(0,0,0)
     .list-header
       height: 40px
       line-height: 40px
