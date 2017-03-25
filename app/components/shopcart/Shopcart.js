@@ -45,7 +45,6 @@ class Shopcart extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    console.log(this.props.food);
     this.selectFood = [];
     this.totalCount = 0;
     this.totalPrice = 0;
@@ -67,7 +66,6 @@ class Shopcart extends React.Component {
         this.diff = '去结算';
       }
   }
-
   componentDidUpdate() {
     window.setTimeout( () => {
       if (!this.scroll && this.refs['list-content']) {
